@@ -160,7 +160,6 @@ This project was inspired by the [Calculator](https://www.theodinproject.com/pat
 
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev/)
-- [Ninja API](https://api-ninjas.com/api/quotes)
 - [GitHub](https://github.com/)
 - [Microverse](https://www.microverse.org/)
 
