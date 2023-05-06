@@ -156,8 +156,6 @@ If you like this project, please give it a star on GitHub.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-This project was inspired by the [Calculator](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript/lessons/calculator) project from The Odin Project. Special thanks to the creators and contributors of the following resources used in this project:
-
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev/)
 - [GitHub](https://github.com/)
