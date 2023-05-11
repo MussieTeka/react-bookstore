@@ -1,18 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  categories: [],
-  status: 'Under construction',
-};
+const initialState = [
+  'Fiction',
+  'Nonfiction',
+  'Mystery',
+  'Fantasy',
+];
 
 const categoriesSlice = createSlice({
   name: 'categories',
   initialState,
-  reducers: {
-    // No action required for categories
-  },
+  reducers: {},
 });
-
-export const { actions } = categoriesSlice;
 
 export default categoriesSlice.reducer;
