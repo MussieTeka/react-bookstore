@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import BookList from '../components/BookList';
 import AddBookForm from '../components/AddBookForm';
+import { removeBook, addBook } from '../redux/books/booksSlice';
 
 const Books = () => {
-  const [books, setBooks] = useState([]);
+  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
   const handleDeleteBook = (bookToDelete) => {
-    setBooks(books.filter((book) => book !== bookToDelete));
+    dispatch(removeBook(bookToDelete));
   };
 
   const handleAddBook = (bookToAdd) => {
-    setBooks([...books, bookToAdd]);
+    dispatch(addBook(bookToAdd));
   };
 
   return (
