@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, fetchBooks } from '../redux/books/booksSlice';
 
 const AddBookForm = () => {
   const [title, setTitle] = useState('');
@@ -8,15 +8,16 @@ const AddBookForm = () => {
   const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const newBook = {
-      item_id: `item${Date.now()}`,
+      item_id: title,
       title,
       author,
       category,
     };
-    dispatch(addBook(newBook));
+    await dispatch(addBook(newBook));
+    dispatch(fetchBooks());
     setTitle('');
     setAuthor('');
     setCategory('');

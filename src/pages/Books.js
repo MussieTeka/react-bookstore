@@ -1,26 +1,22 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import BookList from '../components/BookList';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooks } from '../redux/books/booksSlice';
 import AddBookForm from '../components/AddBookForm';
-import { removeBook, addBook } from '../redux/books/booksSlice';
+import BookList from '../components/BookList';
 
 const Books = () => {
-  const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
+  const books = useSelector((state) => state.books);
 
-  const handleDeleteBook = (bookToDelete) => {
-    dispatch(removeBook(bookToDelete));
-  };
-
-  const handleAddBook = (bookToAdd) => {
-    dispatch(addBook(bookToAdd));
-  };
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   return (
     <div>
       <h1>Books</h1>
-      <BookList books={books} handleDeleteBook={handleDeleteBook} />
-      <AddBookForm handleAddBook={handleAddBook} />
+      <BookList books={books} />
+      <AddBookForm />
     </div>
   );
 };
