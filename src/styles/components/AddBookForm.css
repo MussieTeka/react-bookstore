@@ -1,0 +1,62 @@
+.add-book {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 50px 20px;
+}
+
+.add-book h2 {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.add-book-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title,
+.author,
+.category {
+  margin-bottom: 10px;
+}
+
+.title input,
+.author input,
+.category select {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.category select {
+  width: 310px;
+}
+
+button[type="submit"] {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 11.5rem;
+  height: 2.813rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: rgb(0, 135, 255);
+}
+
+.horizontal-line {
+  border-top: 2px solid rgb(204, 204, 204);
+  margin-bottom: 30px;
+  width: 100%;
+}
